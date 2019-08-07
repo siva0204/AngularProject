@@ -1,0 +1,37 @@
+<div class="container col-md-8">
+  <form class = "form" #f= "ngForm">
+    <div class="form-group mt-5">
+      <label class = "form-label">Task ID:</label>
+      <input type="number"   [(ngModel)]="task.taskId"   name = "taskId"  class="form-control" />
+    </div>
+    <div class="form-group">
+      <label class = "form-label">Name : </label>
+      <input type="text" class="form-control" [(ngModel)]="task.name"  #name = "ngModel" name = "name" />
+    </div>
+
+    <div class="form-group">
+          <label class = "form-label">Priority: </label>
+          <input type="number" class="form-control" [(ngModel)]="task.Priority"  #priority = "ngModel" name = "Priority"/>
+        </div>
+
+
+    <div class="form-group">
+      <label class = "form-label" >Parent Task :</label>
+      <input type="text" class="form-control" [(ngModel)]="task.parentTask" #parentTask = "ngModel" name= "parentTask" />
+    </div>
+    <div class="form-group">
+      <label class = "form-label">Start date :</label>
+      <input type="date" class="form-control" [(ngModel)]="task.startDate"  #startDate = "ngModel"  name = "startDate">
+    </div>
+    <div class="form-group">
+          <label class = "form-label">endDate date :</label>
+          <input type="date" class="form-control" [(ngModel)]="task.endDate"  #endDate = "ngModel"  name = "endDate">
+        </div>
+    <div class="form-group text-center">
+      <button (click)="delete()" class="btn btn-primary" >{{isNew ? "delete":""}}</button>
+    </div>
+  </form>
+</div>
+
+
+

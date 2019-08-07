@@ -1,0 +1,49 @@
+
+
+
+<input min="0" type="number" #taskId >
+<input type="button" value="search"  (click)="search(taskId.value)">
+<!-- ..................................... -->
+<div *ngIf="onSearch" class="container">
+       
+        <table class="table table-striped table-bordered">
+          <thead class="bg-info">
+            <tr>
+              <th>TASK ID</th>
+              <th>NAME</th>
+              <th>PARENT TASK</th>
+              <th> PRIORITY</th>
+              <th>START DATE</th>
+              <th>DUE DATE</th>
+
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+
+          
+              <td>{{task.taskId}}</td>
+              <td>{{task.name}}</td>
+              <td>{{task.parentTask}}</td>
+              <td>{{task.priority}}</td>
+              <td>{{task.startDate|date:'shortDate'}}</td>
+              <td>{{task.endDate|date:'shortDate'}}</td>
+           
+            </tr>
+          </tbody>
+          <tfoot>
+           
+              <tr>
+                  
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br> 
+

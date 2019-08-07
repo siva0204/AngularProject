@@ -1,0 +1,91 @@
+
+
+        <body>
+          <div>
+            <!-- <img src="/assets/images/click.jpg" /> -->
+          </div>
+         <div> 
+         <h5> 
+        <form>
+        
+        <table align="center">
+          
+        <br>
+        <br>
+
+        <tr> 
+        <td> <label >TASK ID:</label></td>
+        <td> <input min="0" type="number" class="form-control" [(ngModel)]="task.taskId" #taskId = "ngModel" name="taskId" /></td> 
+        </tr>
+        <tr> 
+        <td> <label>NAME:</label></td>
+        <td><input type="text" class="form-control" [(ngModel)]="task.name" #name = "ngModel" name="name" /></td> 
+        </tr>
+
+
+        <tr>
+
+        <td><label for="Designation">Designation </label> </td>
+       
+          <td><select id="Designation" name="Designation" [(ngModel)]="task.Designation" class="form-control">
+            <!-- <option>---Select----</option> -->
+          <option value="Manager">Manager</option>
+          <option value="AssistantManager">Assistant Manager</option>
+          </select> </td>
+       
+      </tr>
+
+
+        <tr>
+        <td> <label> PRIORITY:</label></td>
+        <td> <input type="range" min="0" max="30" class="form-control" [(ngModel)]="task.priority" #parentTask = "ngModel" name="priority" /></td> {{task.priority}}
+        </tr>
+
+
+
+        <tr>
+
+          <td><label>Status</label> </td>
+            <td><select id="Status" name="Status" [(ngModel)]="task.Status" class="form-control">
+            <!-- <option>---Select----</option> -->
+            <option value="open">Open</option>
+            <option value="pending">Pending</option>
+            <option value="closed" >Closed</option>
+            </select> </td>
+         
+  
+        </tr>
+
+
+
+
+        <tr>
+        <td> <label>PARENT TASK:</label></td>
+        <td> <input type="text" class="form-control" [(ngModel)]="task.parentTask" #parentTask = "ngModel" name="parentTask" /> </td>
+        </tr>
+        <tr>
+        <td> <label>START DATE:</label></td>
+        <td> <input type="date" class="form-control" [(ngModel)]="task.startDate" #startDate = "ngModel" name="startDate" /> </td>
+        </tr>
+        <tr>
+        <td> <label>END DATE:</label></td>
+        <td> <input type="date" class="form-control" [(ngModel)]="task.endDate" #endDate = "ngModel" name="endDate" /> </td>
+        </tr>
+        <tr><div class="form-group text-center">
+        <td> <button (click)="add()" class="btn btn-primary" >{{isNew ? "ADD":"UPDATE"}}</button></td>
+        <td> <button (click)="reset()" class="btn btn-primary">RESET</button></td>
+        </div></tr>
+      
+        </table>
+        </form>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+        <br/> 
+      </h5>
+    </div>
+        </body>
